@@ -29,7 +29,7 @@ ps:句式“当我们谈论XX时我们在谈论什么”引用自美国作家卡
 从[Intel的手册](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf)上找的INT指令的简单介绍。
 >The INT n instruction generates a call to the interrupt or exception handler specified with the destination operand The destination operand specifies a vector from 0 to 255, encoded as an 8-bit unsigned intermediate value. Each vector provides an index to a gate descriptor in the IDT. The first 32 vectors are reserved by Intel for system use. Some of these vectors are used for internally generated exceptions.
 
-大意就是INT n用来调用特定的中断或者异常的处理程序。n取值从0x00-0xFF(8位无符号整型)。N就作为上述提到的向量。举一些简单的例子，比如说0x1表示除法上溢或者被零除，0x12表示栈故障(越界或者栈段不存在)，Ox14表示缺页...
+大意就是INT n用来调用特定的中断或者异常的处理程序。n取值从0x00-0xFF(8位无符号整型)。N就作为上述提到的向量。举一些简单的例子，比如说0x1表示除法上溢或者被零除，0x12表示栈故障(越界或者栈段不存在)，0x14表示缺页...
 
 当调用处理程序时，系统栈保存处理器的状态。下列事件将发生:
 * 若转移涉及特权指令改变，则当前栈段寄存器和当前拓展的栈指针(esp)寄存器的内容被压入栈。

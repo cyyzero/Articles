@@ -1,5 +1,5 @@
 ---
-title: something tricky
+title: c++的ub还真是无处不在啊
 date: 2017-11-13 23:59:56
 tags:
 - c++
@@ -62,7 +62,7 @@ C++11, §18.4.1:
 好吧，一切按照c的来：
 
 C11, §7.20.1.1:
->The typedef name intN_t designates a signed integer type with width N, no padding bits, and a two’s complement representation. Thus, int8_t denotes such a signed integer type with a width of exactly 8 bits.
+>The typedef name intN_t designates a signed integer type with width N, no padding bits, and a two’s complement representation. Thus, int8\_t denotes such a signed integer type with a width of exactly 8 bits.
 
 c++11明确规定了有符号类型用了补码表示。但是并没有像无符号类型那样，定义了溢出之后对结果取模。也就是说，有符号类型溢出是未定义的。所以用上面那个方法交换的结果也是未定义。
 

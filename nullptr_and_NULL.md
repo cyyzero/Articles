@@ -2,6 +2,7 @@
 title:  nullptr vs NULL
 date: 2017-11-04 10:13:15
 tags:
+- c++
 ---
 
 大家都知道,在C语言中,NULL被用来表示空指针常量(null pointer constant),用来与任何指向真实对象的指针区分.

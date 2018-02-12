@@ -17,7 +17,7 @@ c99标准里这么描述:
 但是在c++中就有不同了.c++不支持void* 隐式转化为其他指针类型,NULL宏定义成(void*)0就没什么意义. 于是,c++中NULL一般宏定义为0. 
 
 但是这么以来,问题就出现了
-```c++
+```cpp
 #include <iostream>
 void f(void *)
 {
@@ -58,7 +58,7 @@ test.cpp:7:6: note: candidate: void f(int)
 大概意思就是nullptr类型是std::nullptr_t(大概可以理解成true和false之于bool类型的关系),是个纯右值(prvalue).nullptr可以隐式转化成任意指针类型的空指针值(null pointer value).
 
 再来看一个例子:
-```c++
+```cpp
 #include <cstddef>
 #include <iostream>
 template<class F, class A>

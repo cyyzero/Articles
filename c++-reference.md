@@ -10,7 +10,7 @@ tags:
 
 接下来，看一个很简单的小例子：
 
-```c++
+```cpp
 void test()
 {
 	int a = 6;
@@ -52,7 +52,7 @@ _Z4testv:
 
 吓得我赶紧试验一下...
 
-```c++
+```cpp
 void test()
 {
 	int a = 6;
